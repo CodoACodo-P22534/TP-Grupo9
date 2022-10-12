@@ -59,6 +59,14 @@ body{
     margin-left:10px;
 }
 
+header ul a {
+    text-decoration: none;
+}
+
+header ul a:hover {
+    text-decoration: none;
+    opacity: 0.5
+}
 
 
 footer{
