@@ -5,7 +5,7 @@ body{
 .grid {
     display: grid;
     grid-template-columns: [x0] 0.3fr [x1] 1fr [x2] 1fr [x3];
-    grid-template-rows: [y0] 10fr [y1] 0.3fr [y2]; 
+    grid-template-rows: [y0] 5fr [y1] 0.8fr [y2]; 
     margin-top: 90px;
     }
 /* 
@@ -30,7 +30,7 @@ body{
 }
 
 .footer {
-    background: green;
+    /* background: green; */
     grid-column: x0 / x3;
     grid-row: y1;
 }
@@ -63,9 +63,23 @@ body{
 
 footer{
     display: flex;
-    justify-content: center
+    flex-direction: column;
+    
 }
 
 .footer-redes{
-    display: inline-flex;    
+    display: inline-flex;  
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
 } 
+
+.footer-redes a {
+    text-decoration: none;
+    color: black;        
+}
+
+
+.footer-redes a:hover {
+    opacity: 0.5
+}
