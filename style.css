@@ -91,6 +91,8 @@ header ul a:hover {
 
 /* fin de los estilos del nav */
 
+/* estilos footer */
+
 footer{
     display: flex;
     flex-direction: column;
@@ -114,25 +116,24 @@ footer{
     opacity: 0.5
 }
 
+/* fin estilos footer */
+
+/* estilos catalago productos */
+
 #productos{
     display: flex;    
     justify-content: space-around;
-    flex-wrap: wrap;
-
-   
-}
-
-#productos h1{
-    color:white;
+    flex-wrap: wrap;   
 }
 
 .producto{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-width: 15rem;
     max-width: 20rem;
+    height: 25rem;
     border: solid 1px black;
     border-radius: 10px;
 }
