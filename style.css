@@ -30,7 +30,7 @@ body{
 /* estilos del nav */
 
 .contenedor-nav{
-    width: 98%;
+    width: 98%;    
     display: inline-flex ; 
     justify-content: space-between; 
     position: fixed;
@@ -44,7 +44,7 @@ body{
     display: flex;
     width: 35rem;    
     align-items: center;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 
 #li-nav{
@@ -85,8 +85,7 @@ header ul a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-right: 0.5rem;
+    align-items: center; 
 }
 
 /* fin de los estilos del nav */
@@ -147,7 +146,9 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+/* fin estilos catalago productos */
 
+/* estilos btn scroll to the top */
 
 #myBtn {
     display: none;
@@ -168,3 +169,53 @@ footer{
   #myBtn:hover {
     background-color: #555;
   }
+
+  /* fin estilos btn scroll to the top */
+
+  @media (max-width: 576px) {
+    li{
+        display: none
+    }
+
+    .contenedor-nav{
+        width:95%;       
+    }
+
+    header img{
+        max-width: 8rem;
+    }
+
+    #li-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .link-nav{
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    li{
+        display: none
+    }
+
+    .contenedor-links-nav{        
+        margin-right: 1rem;
+    }
+
+    header img{
+        max-width: 8rem;
+    }
+
+    #li-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .link-nav{
+        margin-right: 3rem;
+    }
+}
