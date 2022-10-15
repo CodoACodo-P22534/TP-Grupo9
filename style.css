@@ -5,7 +5,7 @@ body{
 .grid {
     display: grid;
     grid-template-columns: [x0] 0.3fr [x1] 1fr [x2] 1fr [x3];
-    grid-template-rows: [y0] 5fr [y1] 0.8fr [y2]; 
+    grid-template-rows: [y0] 5fr [y1] 100px [y2]; 
     margin-top: 120px;
     }
 
@@ -16,7 +16,7 @@ body{
 }
 
 .content {
-    background: orange;
+    /* background: orange; */
     grid-column: x1 / x3;
     grid-row: y0 / y1;
 }
@@ -26,6 +26,8 @@ body{
     grid-column: x0 / x3;
     grid-row: y1;
 }
+
+/* estilos del nav */
 
 .contenedor-nav{
     width: 98%;
@@ -87,6 +89,8 @@ header ul a:hover {
     margin-right: 0.5rem;
 }
 
+/* fin de los estilos del nav */
+
 footer{
     display: flex;
     flex-direction: column;
@@ -109,3 +113,57 @@ footer{
 .footer-redes a:hover {
     opacity: 0.5
 }
+
+#productos{
+    display: flex;    
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+   
+}
+
+#productos h1{
+    color:white;
+}
+
+.producto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 15rem;
+    max-width: 20rem;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.producto img{
+    width: 41.66%;
+}
+
+.footerProducto{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
