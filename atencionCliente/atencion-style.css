@@ -1,0 +1,148 @@
+body{
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 0.2fr [x2];
+    grid-template-rows: [y0] 3fr [y1] 3fr [y2] 10fr [y3]; 
+    margin-top: 120px;
+    }
+
+.acercaDe {
+    background: black;
+    grid-column: x0 / x1;
+    grid-row: y0 / y1;
+    color: rgb(255, 255, 255);
+}
+
+.infoContacto {
+    background: orange; 
+    grid-column: x0 / x1;
+    grid-row: y1 / y2;
+    display:flex;
+    justify-content: space-around;
+}
+
+.preguntasFrecuentes {
+    background: green;
+    grid-column: x0 / x2;
+    grid-row: y2 / y3;
+}
+.formasDePago {
+   /*  background: rgb(60, 0, 128); */
+    grid-column: x1 / x2;
+    grid-row: y0 / y2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li img{
+    max-width: 5rem;
+}
+/* estilos fomar de pago */
+.formasDePago li {
+    list-style: none;
+}
+
+/* estilos del nav */
+
+.contenedor-nav{
+    width: 98%;    
+    display: inline-flex ; 
+    justify-content: space-between; 
+    position: fixed;
+    top: 20px;
+    border: solid 1px;
+    border-radius: 20px; 
+    background-color: white;
+}
+
+.contenedor-links-nav{
+    display: flex;
+    width: 35rem;    
+    align-items: center;
+    margin-right: 1rem;
+}
+
+#li-nav{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#li-nav li{
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.contenedor-nav img{
+    margin-left:10px;
+}
+
+header img{
+    max-width: 10rem;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    height: 5rem;
+}
+
+header ul a {
+    text-decoration: none;    
+}
+
+header ul a:hover {
+    text-decoration: none;
+    opacity: 0.5
+}
+
+.link-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* fin de los estilos del nav */
+
+/* estilos preguntas frecuentes */
+
+  
+
+/* estilos footer */
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    bottom: 0; 
+    
+}
+
+.footer-redes{
+    display: inline-flex;  
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+} 
+
+.footer-redes a {
+    text-decoration: none;
+    color: black;        
+}
+
+
+.footer-redes a:hover {
+    opacity: 0.5
+}
+
+/* fin estilos footer */
