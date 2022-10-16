@@ -5,19 +5,19 @@ body{
 .grid {
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 0.2fr [x2];
-    grid-template-rows: [y0] 3fr [y1] 3fr [y2] 10fr [y3]; 
+    grid-template-rows: [y0] 3fr [y1] 3fr [y2] 8fr [y3]; 
     margin-top: 120px;
     }
 
 .acercaDe {
-    background: black;
+   /*  background: black; */
     grid-column: x0 / x1;
     grid-row: y0 / y1;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
 }
 
 .infoContacto {
-    background: orange; 
+    /* background: orange;  */
     grid-column: x0 / x1;
     grid-row: y1 / y2;
     display:flex;
@@ -25,7 +25,7 @@ body{
 }
 
 .preguntasFrecuentes {
-    background: green;
+    /* background: green; */
     grid-column: x0 / x2;
     grid-row: y2 / y3;
 }
@@ -62,6 +62,7 @@ ul li img{
     border: solid 1px;
     border-radius: 20px; 
     background-color: white;
+    z-index: 1;
 }
 
 .contenedor-links-nav{
@@ -116,6 +117,85 @@ header ul a:hover {
 
 /* estilos preguntas frecuentes */
 
+
+
+.acordeon .contenedor {
+    /* position: relative; */
+    margin: 10px 10px;
+  }
+  
+  /* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
+  
+  .acordeon .etiqueta {
+    /* position: relative; */
+    padding: 10px 0;
+    /* font-size: 30px; */
+    color: black;
+    cursor: pointer;
+  }
+  
+
+.acordeon .etiqueta {
+    /* position: relative; */
+    padding: 10px 0;
+    /* font-size: 30px; */
+    color: black;
+    cursor: pointer;
+  }
+
+   .acordeon .etiqueta::after {
+    content: '+';
+   /*  color: black;
+    position: absolute; 
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%); */
+  }
+  
+  /* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
+  
+  .acordeon .contenido {
+   /*  position: relative; */
+    background: white;
+    height: 0;
+    /* font-size: 20px; */
+    text-align: justify;
+    /* width: 780px; */
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  /* Añade una línea horizontal entre los contenidos */
+  
+  .acordeon hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+
+  
+/* Muestra la parte de contenido cuando está activa. Establece la altura */
+
+.acordeon .contenedor.activa .contenido {
+    height: 100px;
+  }
+  
+  /* Cambia de signo positivo a negativo una vez activado */
+  
+  .acordeon .contenedor.activa .etiqueta::after {
+    content: '-';
+   /*  font-size: 30px; */
+  }
+
+  .etiqueta {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+/* fin estilos preguntas frecuentes */  
   
 
 /* estilos footer */
@@ -146,3 +226,52 @@ footer{
 }
 
 /* fin estilos footer */
+
+
+@media (max-width: 576px) {
+    li{
+        display: none
+    }
+
+    .contenedor-nav{
+        width:95%;       
+    }
+
+    header img{
+        max-width: 8rem;
+    }
+
+    #li-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .link-nav{
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    li{
+        display: none
+    }
+
+    .contenedor-links-nav{        
+        margin-right: 1rem;
+    }
+
+    header img{
+        max-width: 8rem;
+    }
+
+    #li-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .link-nav{
+        margin-right: 3rem;
+    }
+}
