@@ -4,7 +4,7 @@ body{
 
 .grid {
     display: grid;
-    grid-template-columns: [x0] 1fr [x1] 0.2fr [x2];
+    grid-template-columns: [x0] 1fr [x1] 150px [x2];
     grid-template-rows: [y0] 3fr [y1] 3fr [y2] 8fr [y3]; 
     margin-top: 120px;
     }
@@ -22,6 +22,7 @@ body{
     grid-row: y1 / y2;
     display:flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .preguntasFrecuentes {
@@ -49,6 +50,11 @@ ul li img{
 /* estilos fomar de pago */
 .formasDePago li {
     list-style: none;
+}
+
+/* estilos infoContacto */
+.contactos {
+    width: 190px;
 }
 
 /* estilos del nav */
@@ -178,7 +184,7 @@ header ul a:hover {
 /* Muestra la parte de contenido cuando está activa. Establece la altura */
 
 .acordeon .contenedor.activa .contenido {
-    height: 100px;
+    height: 30px;
   }
   
   /* Cambia de signo positivo a negativo una vez activado */
@@ -229,7 +235,7 @@ footer{
 
 
 @media (max-width: 576px) {
-    li{
+    header ul li{
         display: none
     }
 
@@ -253,7 +259,7 @@ footer{
 }
 
 @media (max-width: 768px) and (min-width: 576px) {
-    li{
+    header ul li{
         display: none
     }
 
