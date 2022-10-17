@@ -39,6 +39,10 @@ body{
     align-items: center;
 }
 
+.metodosDePago {
+    display: none;
+}
+
 ul{
     list-style-type: none;
     padding: 0;
@@ -235,6 +239,35 @@ footer{
 
 
 @media (max-width: 576px) {
+    .grid {
+        display: grid;
+        grid-template-columns: [x0] 1fr [x1];
+        grid-template-rows: [y0] 0.5fr [y1] 0.5fr [y2] 0.5fr [y3] 1.5fr [y4]; 
+        margin-top: 120px;
+    }
+
+    .preguntasFrecuentes {
+        /* background: green; */
+        grid-column: x0 / x2;
+        grid-row: y3 / y4;
+    }
+
+    .metodosDePago {
+        display: block;
+        grid-row: y2 / y3;
+    }
+
+    .imgPago{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .imgPago img{
+        width: 5rem;
+    }
+
+
+    
     header ul li{
         display: none
     }
@@ -256,6 +289,10 @@ footer{
     .link-nav{
         margin-right: 1rem;
     }
+
+    .formasDePago {
+        display: none;
+     }
 }
 
 @media (max-width: 768px) and (min-width: 576px) {
