@@ -6,8 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="contacto-style.css">
+    <script src="https://kit.fontawesome.com/ae81e70ed6.js" crossorigin="anonymous"></script>
+    <script src="contacto-validacion.js"></script>
+
 </head>
 <body>
-    <h1>Contacto</h1>
+    <header>
+        <div class="contenedor-nav">
+            
+            <img src="https://i.ibb.co/5XZFmzp/6160517776000b00045a7d7e.png" alt="logo">
+            
+            <div class="contenedor-links-nav">
+                <ul id="li-nav">
+                    <div class="link-nav">
+                        <a href="index.html">                        
+                            <i class="fa-sharp fa-solid fa-house-chimney fa-2xl"></i>                           
+                        </a> 
+                        <li>Home</li>                     
+                    </div>
+                    <div class="link-nav">
+                        <a href="/sucursales/sucursales.html" target="_blank">
+                            <i class="fa-solid fa-map-location-dot fa-2xl"></i>                            
+                        </a> 
+                        <li>Sucursales</li>    
+                    </div>                                                          
+                    <div class="link-nav">
+                        <a href="contacto/contacto.html" target="_blank">
+                            <i class="fa-solid fa-address-card fa-2xl"></i>                            
+                        </a>
+                        <li>Contacto</li>
+                    </div>
+                    <div class="link-nav">
+                        <a href="/atencionCliente/atencion-cliente.html" target="_blank">
+                            <i class="fa-solid fa-circle-question fa-2xl" ></i>   
+                        </a> 
+                        <li>Preguntas Frecuentes</li>
+                    </div>                 
+                   
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="contenedor-formulario">
+        <form class="formulario">
+            <div class="formulario-header">
+                <h1 class="formulario-titulo"><span>C</span>on<span>t</span>ac<span>t</span>o</h1>
+            </div>
+
+            <label for="nombre" class="formulario-label">Nombres: </label>
+            <input type="text" id="nombre" class="formulario-input" placeholder="Escriba sus nombres...">
+            
+            <label for="apellido" class="formulario-label">Apellidos:</label>
+            <input type="text" id="apellido" class="formulario-input" placeholder="Escriba sus apellidos...">
+            
+            <label for="correo" class="formulario-label">Correo electrónico: </label>
+            <input type="email" id="correo" class="formulario-input" placeholder="Escriba su correo electrónico...">
+            
+            <label for="telefono" class="formulario-label">Teléfono: </label>
+            <input type="tel" id="telefono" class="formulario-input" placeholder="Escriba su teléfono...">
+
+            <label for="fecha" class="formulario-label">Fecha de nacimiento: </label>
+            <input type="date" id="fecha" class="formulario-input">
+
+            <div class="formulario-radio">
+                <label class="formulario-radio-label-titulo">Motivo de contacto:</label>
+
+                <input type="radio" id="Sugerencia" name="check">
+                <label for="Sugerencia" class="formulario-radio-label">Sugerencia</label>
+                <input type="radio" id="Reclamo" name="check">
+                <label for="Reclamo" class="formulario-radio-label">Reclamo</label>
+                <input type="radio" id="Pregunta" name="check">
+                <label for="Pregunta" class="formulario-radio-label">Pregunta</label>
+                <input type="radio" id="Solicitud" name="check">
+                <label for="Solicitud de tarjeta" class="formulario-radio-label">Solicitud de tarjeta</label>
+                <input type="radio" id="Otros" name="check">
+                <label for="Otros" class="formulario-radio-label">Otros</label>
+            </div>
+
+            <label for="mensaje" class="formulario-label"> </label>
+            <textarea id="mensaje" class="formulario-textarea" placeholder="Escriba su mensaje aquí..."></textarea>
+
+            <div class="formulario-aclaracion">Aclaración importante: <br> <br>
+                En caso de solicitar la tarjeta de nuestro comercio usted debe escribir "quiero mi tarjeta",
+                agregando su DNI, localidad, dirección de su domicilio y código postal en el área de mensaje.
+            </div>
+
+            <div class="formulario-botons">
+                <input type="submit"  onclick="validarFormulario()" class="formulario-botons-boton" value="Enviar">
+                <input type="reset" class="formulario-botons-boton" value="Borrar">
+            <div>
+        </form>
+    </div>
+
 </body>
 </html>
