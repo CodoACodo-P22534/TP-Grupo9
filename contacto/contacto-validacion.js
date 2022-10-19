@@ -1,30 +1,66 @@
-let nombre = document.getElementById('nombre');
-let apellido = document.getElementById('apellido');
-let telefono = document.getElementById('telefono');
-let mensaje = document.getElementById('mensaje');
+let formulario = document.querySelector(".formulario"); 
 
-//el return 0 es para que no se envíe el formulario por defecto
-
-function validarFormulario() {
-    let errores = new Array();
-
-    if((nombre == null) || (nombre == ' ') || (isNaN(nombre) == false)) {
-        errores.push('el campo nombres es incorrecto');    
-    }
-
-    if((apellido == null) || (apellido == ' ') || (isNaN(apellido) == false)) {
-        errores.push(' el campo apellidos es incorrecto');
-    }
-    
-    if((telefono == null) || (telefono == ' ') || (isNaN(telefono) == true)) {
-        errores.push(' el campo telefono es incorrecto');
-    }
-    
-    if((mensaje == null) || (mensaje == ' ') || (isNaN(mensaje) == false)) {
-        errores.push(' el campo mensaje es incorrecto');
-    }
-
-    alert(errores);
-
-    return false;
+const expresiones = {
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // puede contener acentos y Mayúsculas, entre 3 y 40 letras
+    apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // puede contener acentos y Mayúsculas, entre 1 y 40 letras
+    telefono: /^\d{7,20}$/, //numeros de telefono entre 7 y 20 dígitos
+    correo: /^[\w\d.-]*@{1}[a-z]+\.{1}[a-z]+$/, //el correo puede contener caracteres especiales 
+    mensaje: /^.+$/ // el mensaje puede contener cualquier caracter  
 }
+
+let booleanos = {
+    nombreb: false,
+    apellidob: false,
+    telefonob: false,
+    correob: false, 
+    mensajeb: false
+}
+
+function validarCampo(expresion, valorCampo) {
+    if(expresion.test(valorCampo)){
+        return true; 
+    }
+    else {
+        return false;
+    }
+}
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // verifico que cada campo sea válido
+
+    booleanos['nombreb'] = validarCampo(expresiones['nombre'], formulario.nombre.value);
+    // console.log(booleanos['nombreb']);
+    booleanos['apellidob'] = validarCampo(expresiones['apellido'], formulario.apellido.value);
+    // console.log(booleanos['apellidob']);
+    booleanos['correob'] = validarCampo(expresiones['correo'], document.getElementById('correo').value);
+    // console.log(booleanos['correob']);
+    booleanos['telefonob'] = validarCampo(expresiones['telefono'], formulario.telefono.value);
+    // console.log(booleanos['telefonob']);
+    booleanos['mensajeb'] = validarCampo(expresiones['mensaje'], document.getElementById('mensaje').value);
+    // console.log(booleanos['mensajeb']);
+
+    if(booleanos.nombreb && booleanos.apellidob && booleanos.correob && booleanos.telefonob && booleanos.mensajeb){    
+        alert("Su formulario a sido enviado correctamente");
+        formulario.reset();
+    }
+    else {
+        alert('Error en el envío del formulario');
+        if(!booleanos.nombreb){
+            alert("El nombre no puede contener números ni caracteres especiales");
+        }        
+        else if(!booleanos.apellidob){
+            alert("El apellido no puede contener números ni caracteres especiales");
+        }
+        else if(!booleanos.correob){
+            alert("La dirección de correo ingresada no es válida");
+        }        
+        else if(!booleanos.telefonob){
+            alert("El teléfono ingresado no es válido");
+        }  
+        else if(!booleanos.mensajeb){
+            alert("La caja de mensajes no puede estar vacía");
+        }  
+    }
+});

@@ -7,7 +7,7 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="contacto-style.css">
     <script src="https://kit.fontawesome.com/ae81e70ed6.js" crossorigin="anonymous"></script>
-    <script src="contacto-validacion.js"></script>
+    
 
 </head>
 <body>
@@ -48,25 +48,25 @@
         </div>
     </header>
     <div class="contenedor-formulario">
-        <form class="formulario">
+        <form class="formulario" id="formulario">
             <div class="formulario-header">
                 <h1 class="formulario-titulo"><span>C</span>on<span>t</span>ac<span>t</span>o</h1>
             </div>
 
             <label for="nombre" class="formulario-label">Nombres: </label>
-            <input type="text" id="nombre" class="formulario-input" placeholder="Escriba sus nombres...">
+            <input type="text" id="nombre" class="formulario-input" placeholder="Escriba sus nombres..." name="nombre" required>
             
             <label for="apellido" class="formulario-label">Apellidos:</label>
-            <input type="text" id="apellido" class="formulario-input" placeholder="Escriba sus apellidos...">
+            <input type="text" id="apellido" class="formulario-input" placeholder="Escriba sus apellidos..." name="apellido" required>
             
             <label for="correo" class="formulario-label">Correo electrónico: </label>
-            <input type="email" id="correo" class="formulario-input" placeholder="Escriba su correo electrónico...">
+            <input type="email" id="correo" class="formulario-input" placeholder="Escriba su correo electrónico..." required>
             
             <label for="telefono" class="formulario-label">Teléfono: </label>
-            <input type="tel" id="telefono" class="formulario-input" placeholder="Escriba su teléfono...">
+            <input type="tel" id="telefono" class="formulario-input" placeholder="Escriba su teléfono..." name="telefono" required>
 
             <label for="fecha" class="formulario-label">Fecha de nacimiento: </label>
-            <input type="date" id="fecha" class="formulario-input">
+            <input type="date" id="fecha" class="formulario-input" required>
 
             <div class="formulario-radio">
                 <label class="formulario-radio-label-titulo">Motivo de contacto:</label>
@@ -84,7 +84,7 @@
             </div>
 
             <label for="mensaje" class="formulario-label"> </label>
-            <textarea id="mensaje" class="formulario-textarea" placeholder="Escriba su mensaje aquí..."></textarea>
+            <textarea id="mensaje" class="formulario-textarea" placeholder="Escriba su mensaje aquí..." required></textarea>
 
             <div class="formulario-aclaracion">Aclaración importante: <br> <br>
                 En caso de solicitar la tarjeta de nuestro comercio usted debe escribir "quiero mi tarjeta",
@@ -92,11 +92,12 @@
             </div>
 
             <div class="formulario-botons">
-                <input type="submit"  onclick="validarFormulario()" class="formulario-botons-boton" value="Enviar">
+                <input type="submit" class="formulario-botons-boton" value="Enviar">
                 <input type="reset" class="formulario-botons-boton" value="Borrar">
             <div>
         </form>
     </div>
 
+    <script src="contacto-validacion.js"></script>
 </body>
 </html>

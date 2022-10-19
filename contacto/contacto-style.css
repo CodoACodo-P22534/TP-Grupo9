@@ -8,6 +8,7 @@ body{
     background-position: center;
 }
 
+
 /* Estilos del nav*/
 
 .contenedor-nav{
@@ -127,6 +128,10 @@ span {
     color: #00cccc;
 }
 
+.contenedor-formulario .formulario .formulario-input:focus, .formulario-textarea:focus {
+    border: 2px solid #00b3b3;
+}
+
 .contenedor-formulario .formulario .formulario-textarea {
     resize: vertical;
     max-height: 150px;
@@ -216,3 +221,12 @@ span {
 
 /* fin pseudoelementos */
 
+
+/* diseño responsive */
+
+@media only screen and (max-width: 1000px){
+    .contenedor-formulario .formulario {
+        background-color: #ffffff;
+    }
+    
+}
