@@ -17,7 +17,7 @@ le puedo poner la medida en px, %, etc*/
 h1 {
     color: black;
     font-weight: normal; /*le saco la negrita*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     font-size: 2.5rem; /*1em es el valor del tamaño de la fuente de su padre*/
     /* background: orange; */
     text-align: center;
@@ -107,8 +107,22 @@ header ul a:hover {
 h2 {
     text-align: center;
     font-weight: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     font-size: 1.5rem;
+}
+
+.links-locales {
+    background-color: aqua;
+    padding-left: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+.links-mapas {
+    text-decoration: none;
+    line-height: 2rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 /*FIN ENCABEZADO SUCURSALES Y TEXTO*/
@@ -203,6 +217,7 @@ REVISAR COMO SE HACE ESO*/
     .link-nav{
         margin-right: 1rem;
     }
+
 }
 
 @media (max-width: 768px) and (min-width: 576px) {
@@ -227,6 +242,35 @@ REVISAR COMO SE HACE ESO*/
     .link-nav{
         margin-right: 3rem;
     }
+}
+
+
+/*cuando achico la pantalla por debajo de esa medida, 
+pone las img una debajo de la otra, y a las letras del titulo 
+y del subtitulo las hace un poco más chicas. 
+
+No se que otros puntos de corte poner
+*/
+@media (max-width: 900px) {
+
+.contenedor-mapas-y-sucursales {
+    /*esto del renglon de abajo no me anduvo*/
+    /* grid-auto-flow: dense; */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.links-locales {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
 }
 
 /*FIN RESPONSIVE*/
