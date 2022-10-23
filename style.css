@@ -11,14 +11,18 @@ body{
 
 /*El sidebar capaz lo podemos poner redondeado si les parece*/
 .sidebar { 
-    background: black;
-    grid-row: y0 / y1;
-    color: white;
+    /* background: black;
+    grid-row: y0 / y1; */
+    /* position: fixed;
+    top: 150px;
+    border: solid 1px;
+    border-radius: 20px; 
+    background-color: white; */
 }
 
 .content {
     /* background: orange; */
-    grid-column: x1 / x3;
+    grid-column: x0 / x3;
     grid-row: y0 / y1;
 }
 
@@ -91,6 +95,85 @@ header ul a:hover {
 
 /* fin de los estilos del nav */
 
+/*estilos del sidebav*/
+
+
+.hamburger{
+	font-size: 25px;
+	cursor: pointer;
+    position: fixed;
+	top: 130px;
+    right: 20px;
+
+	/* color: white; */
+}
+
+.hamburger:hover{
+	color: #007dc3;
+}
+.sidebar{
+    position: fixed;
+    top: 170px;
+    left: 0;
+    width: 220px;
+    height: 23rem;
+    background: #a8a8a7; 
+    border-radius: 0 20px 20px 0;
+   }
+
+   .sidebar ul{
+    margin: 0;
+    padding: 0;
+   }
+   
+   .sidebar ul li{
+    list-style:none;     
+   }
+   .sidebar ul li a{
+    display: block;
+    padding: 16px 20px;
+    /* border-bottom: 1px solid #03374e; */
+    color: #0e94d4;
+    text-decoration: none;
+   }
+   
+   .sidebar ul li a .icon{
+    font-size: 18px;
+    /* color: white; */
+    vertical-align: middle;
+   }
+   
+   .sidebar ul li a .text{
+    margin-left: 15px;
+    color: #000; 
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+   }
+   
+   .sidebar ul li a:hover{
+    background: #0e94d4;
+    color: #fff;
+   }
+
+   .hover_collapse .sidebar{
+    display: none;
+    width: 0px;
+   }
+
+   .sidebar h2{
+    text-align: center;
+   }
+   /* 
+   .hover_collapse .sidebar ul li a .text{
+    display: none;
+   }
+    */
+   
+/*fin estilos sidebar*/
+
+
+
 /* estilos footer */
 
 footer{
@@ -121,9 +204,13 @@ footer{
 /* estilos catalago productos */
 
 #productos{
+    
+}
+
+.seccionProductos{
     display: flex;    
     justify-content: space-around;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; 
 }
 
 .producto{
@@ -179,7 +266,7 @@ footer{
   /* fin estilos btn scroll to the top */
 
   @media (max-width: 576px) {
-    li{
+    .link-nav li{
         display: none
     }
 
@@ -203,7 +290,7 @@ footer{
 }
 
 @media (max-width: 768px) and (min-width: 576px) {
-    li{
+    .link-nav li{
         display: none
     }
 
@@ -225,3 +312,4 @@ footer{
         margin-right: 3rem;
     }
 }
+
