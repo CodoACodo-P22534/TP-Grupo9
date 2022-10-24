@@ -40,7 +40,8 @@ Le tengo que dar un alto y un ancho*/
     border: solid 1px;
     border-radius: 20px; 
     background-color: white;
-    margin: 0.7rem;
+    /* margin: 0.7rem; */
+    /* margin: auto */
 }
 
 .contenedor-links-nav{
@@ -63,6 +64,11 @@ Le tengo que dar un alto y un ancho*/
 
 .contenedor-nav img{
     margin-left:10px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
 }
 
 header img{

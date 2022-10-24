@@ -45,6 +45,11 @@ body{
     border-radius: 50%;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+}
+
 header img{
     max-width: 10rem;
 }

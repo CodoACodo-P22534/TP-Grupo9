@@ -102,7 +102,7 @@ function insertarProducto(data, seccionProductos){
 
     //se empiezan a unir y montar los elementos
     article.className = "producto";                             //se le agrega la clase "producto" a la seccion "article"            
-    article.innerHTML = `<h3>${productoTitulo}</h3>`;           //se inserta un titulo h3 que tiene como contenido el valor de la variable "productoTitulo"
+    article.innerHTML = `<h2>${productoTitulo}</h2>`;           //se inserta un titulo h3 que tiene como contenido el valor de la variable "productoTitulo"
 
     imagen.src = `${imagenProducto}`;                           //se le agrega el atributo src a la imagen
     imagen.alt = "producto";                                    //se le agrega el atributo alt a la imagen 
@@ -110,7 +110,8 @@ function insertarProducto(data, seccionProductos){
     div.className = "footerProducto"; 
     ancla.href = "pag-error/pag-error.html";  
     ancla.target = "_blank"                            
-    boton.textContent = "Comprar";                              //se le agrega el texto al boton
+    boton.textContent = "Comprar";  
+    boton.className = "btn-comprar"                            //se le agrega el texto al boton
     precio.textContent = `$${precioProducto}`;                  //se pone el valor de la variable "precioProducto" como contenido del "p"
     
     //se insentan el precio y el boton en el div

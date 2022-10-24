@@ -203,10 +203,6 @@ footer{
 
 /* estilos catalago productos */
 
-#productos{
-    
-}
-
 .seccionProductos{
     display: flex;    
     justify-content: space-around;
@@ -221,7 +217,7 @@ footer{
     min-width: 15rem;
     max-width: 20rem;
     height: 25rem;
-    border: solid 1px black;
+    border: solid 2px black;
     border-radius: 10px;
 
     /*Le agrego estos 3 renglones, fijense si les parece, sino lo sacamos(soy martina)*/
@@ -230,14 +226,47 @@ footer{
     margin: 1rem;
 }
 
+.producto:hover{
+    background-color: #68a4e0; 
+    box-shadow: 8px 8px 8px #1014fa;
+ }
+
 .producto img{
-    width: 41.66%;
+    width: 75%;
+    overflow:hidden;
 }
 
 .footerProducto{
     width:100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.footerProducto p{
+    font-size: 1.5rem;
+}
+
+.btn-comprar{
+    color: black;
+    background: white;;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 6px;   
+    padding: 16px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+.btn-comprar:hover{
+    background-color: #008CBA;
+    color: white;
 }
 /* fin estilos catalago productos */
 
