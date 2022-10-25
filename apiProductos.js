@@ -27,13 +27,27 @@ const categoriasProductos = [
 ]
  //se crean los elementos necesarios para mostrar el producto
  const page = document.querySelector("#productos");          // id de la seccion productos
+ let spinner = document.getElementById("cargando")
+ spinner.style="display: block";
+ let contenidoPrincipal = document.querySelector('#principal');
+  contenidoPrincipal.style.display="none" 
 
-
-async function obtenerProductos() {
+ async function obtenerProductos() {
     const response = await fetch(apiUrl);           //se obtienen los datos de la api y se guardan en la variable data
     const data = await response.json();
-    /* console.log(data); */
+    await accionAsincrona();                        //llama a una funcion para que el spinner dure un poco mas
+    console.log(data); 
     filtarProductos(data)                            //se llama al metodo que desgloza la info para armar el catalogo
+    spinner.style = "display: none";                         
+    contenidoPrincipal.style.display="block" 
+} 
+
+const accionAsincrona = async () => {
+  return new Promise((resolve, reject) => {
+  setTimeout(() => {
+      resolve();
+  }, 3000);
+});   
 }
 
 obtenerProductos();
