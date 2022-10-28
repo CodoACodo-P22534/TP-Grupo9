@@ -1,3 +1,16 @@
+@font-face {
+    font-family:"fuente1";
+    /*para mi las dos quedan lindas, dejo esta pero de ultima prueben
+    a ver cual les gusta (dejo la otra comentada), o sino si quieren 
+    otra me dicen, o prueben cualquier cosa*/
+    src: url(fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+    /* src: url(fonts/made_avenue/MADEAvenuePERSONALUSE-Regular.otf); */
+}
+
+* {
+    font-family: "fuente1";
+}
+
 body{
     height: 100%;
     
