@@ -64,6 +64,11 @@ body{
     margin-left:10px;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+}
+
 header img{
     max-width: 10rem;
 }
